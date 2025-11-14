@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตะกร้าสินค้า</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: #f5f6fa; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    .cart-container { max-width: 900px; margin: 40px auto; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    h1 { text-align: center; margin-bottom: 30px; color: #333; }
+    .cart-item { display: flex; align-items: center; justify-content: space-between; padding: 15px; border-bottom: 1px solid #ddd; transition: 0.2s; border-radius: 10px; margin-bottom: 15px; background: #fafafa; }
+    .cart-item:hover { background: #f0f4ff; }
+    .item-info { display: flex; align-items: center; gap: 15px; }
+    .item-info img { width: 80px; height: 80px; border-radius: 10px; object-fit: cover; }
+    .item-name { font-size: 18px; font-weight: 600; color: #333; }
+    .item-price { font-size: 16px; color: #555; margin-top: 5px; }
+    .remove-btn { background: #ff4d4d; color: white; border: none; padding: 10px 15px; border-radius: 10px; cursor: pointer; transition: 0.2s; }
+    .remove-btn:hover { background: #d93636; }
+    .total-box { text-align: right; margin-top: 20px; font-size: 22px; font-weight: bold; color: #4d6fff; }
+    .checkout-btn { width: 100%; padding: 15px; background: #27ae60; border: none; color: white; font-size: 18px; border-radius: 10px; cursor: pointer; margin-top: 25px; transition: 0.2s; }
+    .checkout-btn:hover { background: #1e8c4d; }
+    .back-btn { display: inline-block; margin-top: 20px; text-decoration: none; color: #3498db; font-size: 16px; }
+    @media(max-width:600px){ .cart-item{ flex-direction: column; align-items:flex-start; } .item-info img{ width:100%; height:auto; } }
+  </style>
+</head>
+<body>
+<div class="cart-container">
+  <h1>ตะกร้าสินค้า</h1>
+  <div id="cartItems"></div>
+  <div class="total-box">ราคารวม: <span id="cartTotal">0</span> ฿</div>
+  <button class="checkout-btn" onclick="checkout()">ชำระเงิน</button>
+  <a href="index.html" class="back-btn">⬅ กลับไปเลือกสินค้า</a>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
